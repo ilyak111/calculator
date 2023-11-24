@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="main_textSize"> 20sp </dimen>
-    <dimen name="evaluate_button_textSize"> 28sp </dimen>
-    <dimen name="tableLayout_padding"> 15dp </dimen>
+    <dimen name="button_textSize"> 28sp </dimen>
+    <dimen name="main_window_padding"> 15dp </dimen>
     <dimen name="tableLayout_rows_layout_margin"> 10dp </dimen>
     <dimen name="evaluate_button__left_right_layout_margin"> 50dp </dimen>
     <dimen name="operator_input_height"> 50dp </dimen>

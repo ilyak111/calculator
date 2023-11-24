@@ -1,5 +1,6 @@
 package com.example.calculator
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculator.databinding.ActivityMainBinding
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.evaluateButton.setOnClickListener { evaluate() }
-        binding.aboutAuthorButton.setOnClickListener { binding.resultOutput.text = "Автора зовут Илья" }
+        binding.aboutAuthorButton.setOnClickListener { startActivity(Intent(this@MainActivity, AboutAuthorActivity::class.java)) }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

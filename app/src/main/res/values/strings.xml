@@ -7,11 +7,14 @@
     <string name="operator_text">Оператор:</string>
     <string name="result_text">Результат:</string>
     <string name="evaluate_text">Рассчитать</string>
-    <string name="about_author_text">Об авторе</string>
+    <string name="about_author_label_text">Об авторе</string>
     <string-array name="operators">
         <item>Сложить</item>
         <item>Вычесть</item>
         <item>Умножить</item>
         <item>Разделить</item>
     </string-array>
+
+    <string name="about_author_text">Меня зовут Илья. Это приложение я сделал в рамках домашнего задания в it-клубе МЭИ "Тьюринг".</string>
+    <string name="back_button_text">Назад</string>
 </resources>

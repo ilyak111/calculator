@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="@dimen/tableLayout_padding"
+        android:padding="@dimen/main_window_padding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -140,7 +140,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/main_color"
                 android:text="@string/evaluate_text"
-                android:textSize="@dimen/evaluate_button_textSize" />
+                android:textSize="@dimen/button_textSize" />
         </TableRow>
     </TableLayout>
 
@@ -157,19 +157,19 @@
         android:layout_height="@dimen/about_author_button_height"
         android:layout_marginEnd="@dimen/about_author_block_right_constraint"
         android:backgroundTint="@color/main_color"
-        android:contentDescription="@string/about_author_text"
+        android:contentDescription="@string/about_author_label_text"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_dialog_info"
         app:tint="@color/white" />
 
     <TextView
-        android:id="@+id/about_author"
+        android:id="@+id/about_author_label"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/about_author_button_height"
         android:layout_marginEnd="5dp"
         android:gravity="center_vertical"
-        android:text="@string/about_author_text"
+        android:text="@string/about_author_label_text"
         android:textSize="@dimen/main_textSize"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/about_author_button" />
