@@ -14,7 +14,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.evaluateButton.setOnClickListener { evaluate() }
+        binding.evaluateButton.setOnClickListener {
+            if (binding.operand1Input.text.isNotBlank() && binding.operand2Input.text.isNotBlank())
+                evaluate()
+            else
+                binding.resultOutput.text = getString(R.string.not_all_operands_error_text)
+        }
         binding.aboutAuthorButton.setOnClickListener { startActivity(Intent(this@MainActivity, AboutAuthorActivity::class.java)) }
     }
 
@@ -29,16 +34,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun evaluate() {
-        val op1 = binding.operand1Input.text.toString().toDouble()
-        val op2 = binding.operand2Input.text.toString().toDouble()
-        val result = when (binding.operatorInput.selectedItemPosition) {
-            0 -> op1 + op2
-            1 -> op1 - op2
-            2 -> op1 * op2
-            3 -> op1 / op2
-            else -> 0.0
+        val operand1 = binding.operand1Input.text.toString().toDouble()
+        val operand2 = binding.operand2Input.text.toString().toDouble()
+        val operator = binding.operatorInput.selectedItemPosition
+        if (operator == 3 && operand2 == 0.0)
+            binding.resultOutput.text = getString(R.string.division_by_zero_error_text)
+        else {
+            val result = when (operator) {
+                0 -> operand1 + operand2
+                1 -> operand1 - operand2
+                2 -> operand1 * operand2
+                3 -> operand1 / operand2
+                else -> 0.0
+            }
+            binding.resultOutput.text = result.toString()
         }
-        binding.resultOutput.text = result.toString()
     }
 
     companion object {
