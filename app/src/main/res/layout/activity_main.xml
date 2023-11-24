@@ -6,13 +6,172 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:gravity="center"
+        android:padding="@dimen/main_window_padding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tableLayout_rows_layout_margin"
+            android:layout_marginBottom="@dimen/tableLayout_rows_layout_margin"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/operand1_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/operand1_text"
+                android:textSize="@dimen/main_textSize" />
+
+            <EditText
+                android:id="@+id/operand1_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/operand1_hint"
+                android:inputType="number|numberDecimal|numberSigned"
+                android:maxLength="9"
+                android:textSize="@dimen/main_textSize" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tableLayout_rows_layout_margin"
+            android:layout_marginBottom="@dimen/tableLayout_rows_layout_margin"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/operator_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/operator_text"
+                android:textSize="@dimen/main_textSize" />
+
+            <Spinner
+                android:id="@+id/operator_input"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/operator_input_height"
+                android:layout_weight="1"
+                android:entries="@array/operators" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tableLayout_rows_layout_margin"
+            android:layout_marginBottom="@dimen/tableLayout_rows_layout_margin"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/operand2_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/operand2_text"
+                android:textSize="@dimen/main_textSize" />
+
+            <EditText
+                android:id="@+id/operand2_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/operand2_hint"
+                android:inputType="number|numberDecimal|numberSigned"
+                android:maxLength="9"
+                android:textSize="@dimen/main_textSize" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tableLayout_rows_layout_margin"
+            android:layout_marginBottom="@dimen/tableLayout_rows_layout_margin"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/result_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/result_text"
+                android:textSize="@dimen/main_textSize" />
+
+            <TextView
+                android:id="@+id/result_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/main_textSize" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tableLayout_rows_layout_margin"
+            android:layout_marginBottom="@dimen/tableLayout_rows_layout_margin"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="@dimen/evaluate_button__left_right_layout_margin"
+            android:paddingRight="@dimen/evaluate_button__left_right_layout_margin">
+
+            <Button
+                android:id="@+id/evaluate_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_color"
+                android:text="@string/evaluate_text"
+                android:textSize="@dimen/button_textSize" />
+        </TableRow>
+    </TableLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/about_author_block_bottom_constraint" />
+
+    <ImageButton
+        android:id="@+id/about_author_button"
+        android:layout_width="@dimen/about_author_button_width"
+        android:layout_height="@dimen/about_author_button_height"
+        android:layout_marginEnd="@dimen/about_author_block_right_constraint"
+        android:backgroundTint="@color/main_color"
+        android:contentDescription="@string/about_author_label_text"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_info"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/about_author_label"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/about_author_button_height"
+        android:layout_marginEnd="5dp"
+        android:gravity="center_vertical"
+        android:text="@string/about_author_label_text"
+        android:textSize="@dimen/main_textSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/about_author_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
