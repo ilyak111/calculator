@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_textSize"> 20sp </dimen>
+    <dimen name="evaluate_button_textSize"> 28sp </dimen>
+    <dimen name="tableLayout_padding"> 15dp </dimen>
+    <dimen name="tableLayout_rows_layout_margin"> 10dp </dimen>
+    <dimen name="evaluate_button__left_right_layout_margin"> 50dp </dimen>
+    <dimen name="operator_input_height"> 50dp </dimen>
+    <dimen name="about_author_block_bottom_constraint"> 10dp </dimen>
+    <dimen name="about_author_block_right_constraint"> 10dp </dimen>
+    <dimen name="about_author_button_width"> 50dp </dimen>
+    <dimen name="about_author_button_height"> 50dp </dimen>
+
+</resources>

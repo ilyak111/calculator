@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="operand1_text">Операнд 1:</string>
+    <string name="operand1_hint">Введите операнд 1…:</string>
+    <string name="operand2_text">Операнд 2:</string>
+    <string name="operand2_hint">Введите операнд 2…:</string>
+    <string name="operator_text">Оператор:</string>
+    <string name="result_text">Результат:</string>
+    <string name="evaluate_text">Рассчитать</string>
+    <string name="about_author_text">Об авторе</string>
+    <string-array name="operators">
+        <item>Сложить</item>
+        <item>Вычесть</item>
+        <item>Умножить</item>
+        <item>Разделить</item>
+    </string-array>
 </resources>
